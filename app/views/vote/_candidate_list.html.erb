@@ -1,0 +1,13 @@
+<h2>Candidates</h2>
+<ul>
+  <% if @candidates.present? %>
+    <%= form_with url: "/vote", method: :post do |form| %>
+      <% @candidates.each do |candidate| %>
+        <%= form.radio_button :candidate_id, candidate.id %> <%= candidate.name %><br />
+      <% end %>
+      <%= form.submit "Vote" %>
+    <% end %>
+  <% else %>
+    <li>No candidates currently running.</li>
+  <% end %>
+</ul>

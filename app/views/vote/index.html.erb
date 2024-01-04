@@ -1,0 +1,11 @@
+<h1>Time to vote!</h1>
+
+<p>
+  Welcome to the voting app <%= @current_user.email %>
+  <% if @current_user.candidate_id %>, you have already voted<% end %>!
+</p>
+
+<% if @current_user.candidate_id.blank? %>
+  <%= render "candidate_list" %>
+  <%= render "add_candidate_form" %>
+<% end %>
