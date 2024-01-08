@@ -1,0 +1,8 @@
+<% if @candidates.length < 10 %>
+  <h2>Add a candidate....</h2>
+  <%= form_with url: "/candidate", method: :post do |form| %>
+    <%= form.label :name, "Candidate name:" %>
+    <%= form.text_field :name %>
+    <%= form.submit "Add candidate" %>
+  <% end %>
+<% end %>

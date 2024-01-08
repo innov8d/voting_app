@@ -1,24 +1,10 @@
-# README
+Code is available on the votingapp branch of repo at https://github.com/innov8d/voting_app. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A PR has been created with information about the implementation: https://github.com/innov8d/voting_app/pull/1. 
 
-Things you may want to cover:
+Running the application should be pretty basic.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bundle install
+bin/rails db:migrate
+bin/rails dev:cache
+bin/rails s
